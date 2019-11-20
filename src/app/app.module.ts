@@ -9,6 +9,7 @@ import { AdvisorComponent } from './advisor/advisor.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LogSignInComponent } from './log-sign-in/log-sign-in.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AdvisorComponent,
     HeaderComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    LogSignInComponent
   ],
   imports: [
     BrowserModule,
