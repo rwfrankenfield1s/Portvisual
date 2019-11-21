@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Router } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { IndependentComponent } from './independent/independent.component';
@@ -10,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LogSignInComponent } from './log-sign-in/log-sign-in.component';
+import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -20,11 +24,13 @@ import { LogSignInComponent } from './log-sign-in/log-sign-in.component';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    LogSignInComponent
+    LogSignInComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
