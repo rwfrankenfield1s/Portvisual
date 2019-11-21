@@ -7,6 +7,7 @@ import { AdvisorComponent } from './advisor/advisor.component'; // Add this
 import { LogSignInComponent } from './log-sign-in/log-sign-in.component';
 import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'Advisor', component: AdvisorComponent }, 
   { path: 'log-sign-in', component: LogSignInComponent },          // Add this
   { path: 'register', component:RegisterComponent},
+  { path: 'dashboard', component:DashboardComponent},
   {
     path: '',
     redirectTo: 'Independent',
