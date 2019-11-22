@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LogSignInComponent } from './log-sign-in/log-sign-in.component';
 import { RegisterComponent } from './register/register.component';
+import { ReportsComponent } from './reports/reports.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { RegisterComponent } from './register/register.component';
     FooterComponent,
     DashboardComponent,
     LogSignInComponent,
-    RegisterComponent
+    RegisterComponent,
+    ReportsComponent,
   ],
   imports: [
     BrowserModule,
