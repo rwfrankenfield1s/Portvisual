@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReportsComponent } from './reports/reports.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { ForgotEmailComponent } from './forgot-email/forgot-email.component';
 
 
 const routerOptions: ExtraOptions = {
@@ -29,6 +31,8 @@ const routes: Routes = [
   { path: 'register', component:RegisterComponent},
   { path: 'dashboard', component:DashboardComponent},
   { path: 'reports', component:ReportsComponent},
+  { path: 'verify-email', component:VerifyEmailComponent},
+  { path: 'forgot-email', component:ForgotEmailComponent},
   {
     path: '',
     redirectTo: 'Independent',
