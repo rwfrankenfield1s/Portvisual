@@ -1,25 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
-import { LogSignInComponent } from './log-sign-in.component';
+@Component({
+  selector: 'app-sign-in',
+  templateUrl: './sign-in.component.html',
+  styleUrls: ['./sign-in.component.css']
+})
 
-describe('LogSignInComponent', () => {
-  let component: LogSignInComponent;
-  let fixture: ComponentFixture<LogSignInComponent>;
+export class SignInComponent implements OnInit {
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ LogSignInComponent ]
-    })
-    .compileComponents();
-  }));
+  constructor(
+    public authService: AuthService
+  ) { }
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LogSignInComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  ngOnInit() { }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+}
