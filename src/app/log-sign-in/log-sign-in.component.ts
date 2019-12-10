@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { AuthService } from '../services/auth.services';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-log-sign-in',
@@ -8,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogSignInComponent implements OnInit {
 
-  constructor(
-    //public authService:AuthService
-  ) { }
+  authError: any;
+
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
+    this.auth.eventAuthError$.subscribe( data => {
+      this.authError = data;
+    });
+  }
+
+  login(frm) {
+    this.auth.login(frm.value.email, frm.value.password);
   }
 }

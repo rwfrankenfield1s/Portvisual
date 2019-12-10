@@ -13,17 +13,38 @@
           <a href="#here" class="nav-link" routerLink="/home">Home</a>
         </li>
         <li class="nav-item">
-          <!-- <a class="nav-link" routerLink="/Independent">Independent</a> -->
           <a class="nav-link" routerLink="/home" fragment="indi">Independent</a>
         </li>
+
         <li class="nav-item">
-          <!-- <a class="nav-link" routerLink="/Advisor">Advisor</a>-->          
-         <a class="nav-link" routerLink="/home" fragment="adv">Advisor</a>
+          <a class="nav-link" routerLink="/home" fragment="adv">Advisor</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" routerLink="/log-sign-in">Login/Register </a>
+         <a class="nav-link" routerLink="/home" fragment="dis">Discord</a>
+         </li>
+
+         <li class="nav-item">
+          <a class="nav-link"  (click)="login()">Login </a>
         </li>
-  
+        
+        <li class="nav-item">
+          <a class="nav-link" (click)="register()" >Register </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">Logout </a>
+        </li>
+        <!-- *ngIf="!user" -->
+      <p *ngIf="user">Logged in as: {{ user?.email }} - {{ user?.displayName }}</p>
       </ul>
+      
+
     </div>
+  
   </nav>
+
+
+<!--  <button class="btn btn-primary" *ngIf="!user" (click)="login()">Login </a>
+      <button class="btn btn-primary mr-2" *ngIf="!user" (click)="register()" >Register </a>
+      <button class="btn btn-primary" *ngIf="!user" (click)="logout()">Logout </a> -->
