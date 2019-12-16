@@ -25,6 +25,7 @@ import { environment } from '../environments/environment';
 import { ForgotEmailComponent } from './forgot-email/forgot-email.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { AuthService } from './services/auth.service';
+import { CreateReportComponent } from './create-report/create-report.component';
 
 
 
@@ -43,6 +44,7 @@ import { AuthService } from './services/auth.service';
     ReportsComponent,
     ForgotEmailComponent,
     VerifyEmailComponent,
+    CreateReportComponent,
   ],
   imports: [
     BrowserModule,

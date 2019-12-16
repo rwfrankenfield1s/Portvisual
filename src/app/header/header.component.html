@@ -36,9 +36,10 @@
           <a class="nav-link" (click)="logout()">Logout </a>
         </li>
         <!-- *ngIf="!user" -->
-      <p *ngIf="user">Logged in as: {{ user?.email }} - {{ user?.displayName }}</p>
-      </ul>
       
+      </ul>
+      <!-- <p class="userdis" *ngIf="user">Logged in as: {{ user?.email }} - {{ user?.displayName }}</p> -->
+      <p class="userdis" *ngIf="user">Signed in as {{ user?.displayName }}</p>
 
     </div>
   

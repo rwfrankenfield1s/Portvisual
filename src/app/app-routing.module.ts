@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
 import { HomeComponent } from './home/home.component'; // Add this
@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReportsComponent } from './reports/reports.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { ForgotEmailComponent } from './forgot-email/forgot-email.component';
+import { CreateReportComponent } from './create-report/create-report.component';
 
 
 const routerOptions: ExtraOptions = {
@@ -24,15 +25,16 @@ const routerOptions: ExtraOptions = {
 
 const routes: Routes = [
   { path: '', component: HomeComponent }, 
-  { path: 'home', component: HomeComponent },              // Add this
-  { path: 'Independent', component: IndependentComponent },           // Add this
+  { path: 'home', component: HomeComponent },
+  { path: 'Independent', component: IndependentComponent },
   { path: 'Advisor', component: AdvisorComponent }, 
-  { path: 'log-sign-in', component: LogSignInComponent },          // Add this
+  { path: 'log-sign-in', component: LogSignInComponent },
   { path: 'register', component:RegisterComponent},
   { path: 'dashboard', component:DashboardComponent},
   { path: 'reports', component:ReportsComponent},
   { path: 'verify-email', component:VerifyEmailComponent},
   { path: 'forgot-email', component:ForgotEmailComponent},
+  { path: 'create-report', component:CreateReportComponent},
   {
     path: '',
     redirectTo: 'Independent',
