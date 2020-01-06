@@ -13,7 +13,6 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { ForgotEmailComponent } from './forgot-email/forgot-email.component';
 import { CreateReportComponent } from './create-report/create-report.component';
 
-
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',

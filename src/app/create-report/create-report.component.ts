@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { ReportService } from './services/report.service';
+
 
 @Component({
   selector: 'app-create-report',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateReportComponent implements OnInit {
 
-  constructor() { }
+constructor(private reportService: ReportService) { }
+    form = new FormGroup({
+    customerName: new FormControl(''),
+    orderNumber: new FormControl(''),
+    coffeeOrder: new FormControl(''), 
+    completed: new FormControl(false)});
+
+
 
   ngOnInit() {
   }
-
 }

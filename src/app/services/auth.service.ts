@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class AuthService {
 
-  private eventAuthError = new BehaviorSubject<string>("");
+  private eventAuthError = new BehaviorSubject<string>('');
   eventAuthError$ = this.eventAuthError.asObservable();
 
   newUser: any;
@@ -30,10 +30,10 @@ export class AuthService {
         this.eventAuthError.next(error);
       })
       .then(userCredential => {
-        if(userCredential) {
+        if (userCredential) {
           this.router.navigate(['/dashboard']);
         }
-      })
+      });
   }
 
   createUser(user) {
@@ -62,7 +62,7 @@ export class AuthService {
       firstname: this.newUser.firstName,
       lastname: this.newUser.lastName,
       role: 'network user'
-    })
+    });
   }
 
   logout() {
